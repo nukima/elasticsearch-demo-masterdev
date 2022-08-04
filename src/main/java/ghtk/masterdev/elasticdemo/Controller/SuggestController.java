@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.io.IOException;
-import java.util.List;
+import java.util.HashMap;
 
 @RestController
 public class SuggestController {
@@ -17,7 +17,7 @@ public class SuggestController {
     private ApplicationContext context;
 
     @GetMapping(value = "/search/{keyword}/{size}")
-    public List<String> getTitle(@PathVariable String keyword, @PathVariable int size) throws IOException {
+    public HashMap<String,Integer> getTitle(@PathVariable String keyword, @PathVariable int size) throws IOException {
         SuggestService suggestService = context.getBean(SuggestService.class);
         return suggestService.getTitle(keyword, size);
     }
