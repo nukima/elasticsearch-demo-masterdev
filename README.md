@@ -76,7 +76,7 @@
     }
   }
   ```
-3. API gợi ý search theo title
+3. API gợi ý search theo title (kết quả trả về sắp xếp theo số lần xuất hiện)
 * gen_index.py để tách field title 
 * Tạo index
 ```
@@ -93,3 +93,6 @@ PUT title_manhnk9
 ```
 
 * GET Request: http://localhost:8080/search/{keyword}/{size}
+* Ví dụ: GET Requeset: http://localhost:8080/search/ha/10  
+  ![image](https://user-images.githubusercontent.com/67093353/182893870-52206b08-dbd6-470a-b6b8-8d69086e6b71.png)
+
